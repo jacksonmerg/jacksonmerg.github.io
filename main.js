@@ -4,6 +4,8 @@ var mps = 0;
 var clones = 0;
 $("#sell").hide();
 $("#moneycount").hide();
+$("#clone").hide();
+$("#clonecount").hide();
 var onpet = function(){
 pets++;
 document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s)";
