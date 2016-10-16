@@ -6,6 +6,7 @@ $("#sell").hide();
 $("#moneycount").hide();
 $("#clone").hide();
 $("#clonecount").hide();
+$("#booth").hide();
 var onpet = function(){
 pets++;
 document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s)";
@@ -16,6 +17,9 @@ $("#moneycount").show();
 if(pets>99){
 $("#clone").show();
 $("#clonecount").show();
+}
+if(pets>199){
+$("#booth").show();
 }
 };
 var sell = function(){
