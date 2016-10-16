@@ -12,5 +12,5 @@ $("#moneycount").show();
 };
 var sell = function(){
 money++;
-document.getElementById("count").innerHTML = "You have " + String(money)+"$";
+document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$";
 }
