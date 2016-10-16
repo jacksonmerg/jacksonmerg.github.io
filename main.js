@@ -27,14 +27,14 @@ document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$
 }};
 var clone = function(){
 clones++;
-document.getElementById("clonecount").innerHTML = "You have " + String(pets)+" Eddie clones";
+document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones";
 };
 var buildbooth = function(){
 if(money>19){
   clones--;
   money-=20;
   mps++;
-  document.getElementById("clonecount").innerHTML = "You have " + String(pets)+" Eddie clones";
+  document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones";
   document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$ ("+mps+"/s)";
 }};
 var onTick = function(){
