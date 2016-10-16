@@ -1,4 +1,5 @@
 var pets = 0;
+var money = 0;
 $("#sell").hide();
 $("#moneycount").hide();
 var onpet = function(){
@@ -9,3 +10,7 @@ $("#sell").show();
 $("#moneycount").show();
 }
 };
+var sell = function(){
+money++;
+document.getElementById("count").innerHTML = "You have " + String(money)+"$";
+}
