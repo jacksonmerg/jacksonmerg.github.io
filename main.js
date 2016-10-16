@@ -34,7 +34,7 @@ clones++;
 document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones";
 };
 var buildbooth = function(){
-if(money>19){
+if(money>19 && clones>0){
   clones--;
   money-=20;
   mps++;
