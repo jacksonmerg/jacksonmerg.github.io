@@ -7,6 +7,19 @@ $("#moneycount").hide();
 $("#clone").hide();
 $("#clonecount").hide();
 $("#booth").hide();
+var savegame = JSON.parse(localStorage.getItem("save"));
+if (typeof savegame.money !== "undefined") money = savegame.money;
+if (typeof savegame.pets !== "undefined") money = savegame.pets;
+if (typeof savegame.mps !== "undefined") money = savegame.mps;
+if (typeof savegame.clones !== "undefined") money = savegame.clones;
+var setsave = function(){
+  var save = {
+    	pets:pets,
+    	money: money,
+    	mps: mps,
+      clones:clones
+    }
+    localStorage.setItem("save",JSON.stringify(save));}
 var onpet = function(){
 pets++;
 document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s)";
@@ -48,4 +61,4 @@ document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$
 }else{
 document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$ ("+mps+"/s)";
 }}
-setInterval("onTick()", 3000);
+setInterval("onTick()", 1000);
