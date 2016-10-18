@@ -31,7 +31,7 @@ if(pps == 0){
 document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s)";
 }else{
 document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s) ("+pps+"/s)";
-}}
+}
 if(pets>29){
 $("#sell").show();
 $("#moneycount").show();
