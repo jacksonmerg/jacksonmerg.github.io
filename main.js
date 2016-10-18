@@ -8,10 +8,12 @@ $("#clone").hide();
 $("#clonecount").hide();
 $("#booth").hide();
 var savegame = JSON.parse(localStorage.getItem("save"));
+if (typeof savegame !== "undefined"){
 if (typeof savegame.money !== "undefined") money = savegame.money;
 if (typeof savegame.pets !== "undefined") money = savegame.pets;
 if (typeof savegame.mps !== "undefined") money = savegame.mps;
 if (typeof savegame.clones !== "undefined") money = savegame.clones;
+}
 var setsave = function(){
   var save = {
     	pets:pets,
