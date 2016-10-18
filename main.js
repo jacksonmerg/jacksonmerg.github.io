@@ -1,13 +1,14 @@
 var pets = 0;
 var money = 0;
 var mps = 0;
-var pps
+var pps = 0
 var clones = 0;
 $("#sell").hide();
 $("#moneycount").hide();
 $("#clone").hide();
 $("#clonecount").hide();
 $("#booth").hide();
+$("#bot").hide();
 var savegame = JSON.parse(localStorage.getItem("save"));
 if (savegame !== null){
   if (typeof savegame.money !== "undefined") money = savegame.money;
