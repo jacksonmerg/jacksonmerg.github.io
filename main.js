@@ -9,13 +9,13 @@ $("#clone").hide();
 $("#clonecount").hide();
 $("#booth").hide();
 var savegame = JSON.parse(localStorage.getItem("save"));
-  if (savegame !== null){
+if (savegame !== null){
   if (typeof savegame.money !== "undefined") money = savegame.money;
   if (typeof savegame.pets !== "undefined") money = savegame.pets;
   if (typeof savegame.mps !== "undefined") money = savegame.mps;
   if (typeof savegame.pps !== "undefined") pps = savegame.pps;
   if (typeof savegame.clones !== "undefined") money = savegame.clones;
-};
+}
 var setsave = function(){
   var save = {
     	pets:pets,
@@ -23,7 +23,8 @@ var setsave = function(){
     	mps: mps,
       clones:clones
     }
-    localStorage.setItem("save",JSON.stringify(save));}
+    localStorage.setItem("save",JSON.stringify(save));
+};
 var onpet = function(){
 pets++;
 if(pps == 0){
