@@ -12,8 +12,8 @@ $("#bot").hide();
 var savegame = JSON.parse(localStorage.getItem("save"));
 if (savegame !== null){
   if (typeof savegame.money !== "undefined") money = savegame.money;
-  if (typeof savegame.pets !== "undefined") money = savegame.pets;
-  if (typeof savegame.mps !== "undefined") money = savegame.mps;
+  if (typeof savegame.pets !== "undefined") pets = savegame.pets;
+  if (typeof savegame.mps !== "undefined") mps = savegame.mps;
   if (typeof savegame.pps !== "undefined") pps = savegame.pps;
   if (typeof savegame.clones !== "undefined") money = savegame.clones;
 }
@@ -22,6 +22,7 @@ var setsave = function(){
     	pets:pets,
     	money: money,
     	mps: mps,
+      pps:pps,
       clones:clones
     };
     localStorage.setItem("save",JSON.stringify(save));
