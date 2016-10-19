@@ -23,7 +23,7 @@ var setsave = function(){
     	money: money,
     	mps: mps,
       clones:clones
-    }
+    };
     localStorage.setItem("save",JSON.stringify(save));
 };
 var onpet = function(){
