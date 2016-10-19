@@ -15,7 +15,7 @@ if (savegame !== null){
   if (typeof savegame.pets !== "undefined") pets = savegame.pets;
   if (typeof savegame.mps !== "undefined") mps = savegame.mps;
   if (typeof savegame.pps !== "undefined") pps = savegame.pps;
-  if (typeof savegame.clones !== "undefined") money = savegame.clones;
+  if (typeof savegame.clones !== "undefined") clones = savegame.clones;
 }
 var setsave = function(){
   var save = {
