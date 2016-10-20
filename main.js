@@ -9,6 +9,7 @@ $("#clone").hide();
 $("#clonecount").hide();
 $("#booth").hide();
 $("#bot").hide();
+$("#transmute").hide();
 var savegame = JSON.parse(localStorage.getItem("save"));
 if (savegame !== null){
   if (typeof savegame.money !== "undefined") money = savegame.money;
