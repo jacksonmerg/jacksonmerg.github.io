@@ -48,7 +48,14 @@ $("#booth").show();
 if(pets>249){
 $("#bot").show();
 }
+if(pets>349){
+$("#transmute").show();
+}
 };
+var transmute = function(){
+money+=5;
+pets--;
+}
 var sell = function(){
 money++;
 if(mps == 0){
