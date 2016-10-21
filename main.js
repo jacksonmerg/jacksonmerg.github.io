@@ -10,6 +10,9 @@ $("#clonecount").hide();
 $("#booth").hide();
 $("#bot").hide();
 $("#transmute").hide();
+$("coincount").hide();
+$("buy").hide();
+$("sell").hide();
 var savegame = JSON.parse(localStorage.getItem("save"));
 if (savegame !== null){
   if (typeof savegame.money !== "undefined") money = savegame.money;
@@ -51,6 +54,11 @@ $("#bot").show();
 }
 if(pets>349){
 $("#transmute").show();
+}
+if(pets>499){
+$("#coincount").show();
+$("#buy").show();
+$("#sell").show();
 }
 };
 var transmute = function(){
