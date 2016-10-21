@@ -3,6 +3,7 @@ var money = 0;
 var mps = 0;
 var pps = 0
 var clones = 0;
+var coin = 0;
 $("#sell").hide();
 $("#moneycount").hide();
 $("#clone").hide();
@@ -83,6 +84,17 @@ if(money>19 && clones>0){
   mps++;
   document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones";
   document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$ ("+mps+"/s)";
+}};
+var buy = function(){
+if(money>0){
+  money--;
+  coin++;
+  document.getElementById("moneycount").innerHTML = "You have " + String(coin)+" eddie coin";
+}};
+var sell = function(){
+if(coins>0){
+  money++;
+  coins;
 }};
 var buildbot = function(){
 if(money>99){
