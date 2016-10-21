@@ -89,12 +89,18 @@ var buy = function(){
 if(money>0){
   money--;
   coin++;
-  document.getElementById("moneycount").innerHTML = "You have " + String(coin)+" eddie coin";
+  document.getElementById("coincount").innerHTML = "You have " + String(coin)+" eddie coin";
 }};
 var sell = function(){
 if(coins>0){
   money++;
   coins;
+  if(mps == 0){
+document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$";
+}else{
+document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$ ("+mps+"/s)";
+}
+  document.getElementById("coincount").innerHTML = "You have " + String(coin)+" eddie coin";
 }};
 var buildbot = function(){
 if(money>99){
