@@ -4,6 +4,7 @@ var mps = 0;
 var pps = 0
 var clones = 0;
 var coin = 0;
+var cps = 0;
 $("#sell").hide();
 $("#moneycount").hide();
 $("#clone").hide();
@@ -21,6 +22,7 @@ if (savegame !== null){
   if (typeof savegame.mps !== "undefined") mps = savegame.mps;
   if (typeof savegame.pps !== "undefined") pps = savegame.pps;
   if (typeof savegame.clones !== "undefined") clones = savegame.clones;
+  if (typeof savegame.cps !== "undefined") cps = savegame.cps;
 }
 var setsave = function(){
   var save = {
@@ -28,6 +30,7 @@ var setsave = function(){
     	money: money,
     	mps: mps,
       pps:pps,
+      cps:cps,
       clones:clones
     };
     localStorage.setItem("save",JSON.stringify(save));
@@ -56,10 +59,13 @@ $("#bot").show();
 if(pets>349){
 $("#transmute").show();
 }
-if(pets>499){
+if(pets>699){
 $("#coincount").show();
 $("#buy").show();
 $("#sell").show();
+}
+if(pets>999){
+$("#hirebreeders").show();
 }
 };
 var transmute = function(){
@@ -75,7 +81,12 @@ document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$
 }};
 var clone = function(){
 clones++;
-document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones";
+clones+=cps
+  if(pps == 0){
+document.getElementById("count").innerHTML = "You have " + String(pets)+" clone(s)";
+}else{
+document.getElementById("count").innerHTML = "You have " + String(pets)+" Eddie clone(s) ("+cps+"/s)";
+}
 };
 var buildbooth = function(){
 if(money>19 && clones>0){
@@ -109,6 +120,12 @@ if(money>99){
   document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones";
   document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$ ("+mps+"/s)";
 }};
+var hirebreeder = function(){
+if(eddiecoin>99){
+  eddiecoin-=100;
+  cps++;
+  document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones";
+}};
 var onTick = function(){
   money+=mps
   if(mps == 0){
@@ -117,6 +134,12 @@ document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$
 document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$ ("+mps+"/s)";
 }
   pets+=pps
+  if(pps == 0){
+document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s)";
+}else{
+document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s) ("+pps+"/s)";
+}
+clones+=cps
   if(pps == 0){
 document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s)";
 }else{
