@@ -121,8 +121,9 @@ if(money>99){
   document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$ ("+mps+"/s)";
 }};
 var hirebreeder = function(){
-if(eddiecoin>99){
+if(eddiecoin>99 && clones>0){
   eddiecoin-=100;
+  clones--;
   cps++;
   document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones";
 }};
