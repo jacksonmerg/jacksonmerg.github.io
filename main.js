@@ -81,11 +81,10 @@ document.getElementById("moneycount").innerHTML = "You have " + String(money)+"$
 }};
 var clone = function(){
 clones++;
-clones+=cps
   if(pps == 0){
-document.getElementById("count").innerHTML = "You have " + String(pets)+" clone(s)";
+document.getElementById("clonecount").innerHTML = "You have " + String(pets)+" clone(s)";
 }else{
-document.getElementById("count").innerHTML = "You have " + String(pets)+" Eddie clone(s) ("+cps+"/s)";
+document.getElementById("clonecount").innerHTML = "You have " + String(pets)+" Eddie clone(s) ("+cps+"/s)";
 }
 };
 var buildbooth = function(){
