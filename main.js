@@ -141,8 +141,8 @@ document.getElementById("count").innerHTML = "You have pet eddie " + String(pets
 }
 clones+=cps
   if(pps == 0){
-document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s)";
+document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones";
 }else{
-document.getElementById("count").innerHTML = "You have pet eddie " + String(pets)+" time(s) ("+pps+"/s)";
+document.getElementById("clonecount").innerHTML = "You have " + String(clones)+" Eddie clones ("+cps+"/s)";
 }}
 setInterval("onTick()", 1000);
